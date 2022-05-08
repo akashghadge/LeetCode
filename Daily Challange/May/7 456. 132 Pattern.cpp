@@ -3,7 +3,7 @@ Given an array of n integers nums, a 132 pattern is a subsequence of three integ
 
 Return true if there is a 132 pattern in nums, otherwise, return false.
 
- 
+
 
 Example 1:
 
@@ -20,7 +20,7 @@ Example 3:
 Input: nums = [-1,3,2,0]
 Output: true
 Explanation: There are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].
- 
+
 
 Constraints:
 
@@ -31,16 +31,23 @@ n == nums.length
 */
 #include <bits/stdc++.h>
 using namespace std;
-class Solution {
+class Solution
+{
 public:
-      bool find132pattern(vector<int>& nums) {
+    bool find132pattern(vector<int> &nums)
+    {
         int s3 = INT_MIN;
         stack<int> st;
-        for( int i = nums.size()-1; i >= 0; i -- ){
-            if( nums[i] < s3 ) return true;
-            else while( !st.empty() && nums[i] > st.top() ){ 
-              s3 = st.top(); st.pop(); 
-            }
+        for (int i = nums.size() - 1; i >= 0; i--)
+        {
+            if (nums[i] < s3)
+                return true;
+            else
+                while (!st.empty() && nums[i] > st.top())
+                {
+                    s3 = st.top();
+                    st.pop();
+                }
             st.push(nums[i]);
         }
         return false;
