@@ -15,7 +15,7 @@ Explanation:
 1 + 2 + 4 = 7
 There are no other valid combinations.
 Example 2:
-
+ 
 Input: k = 3, n = 9
 Output: [[1,2,6],[1,3,5],[2,3,4]]
 Explanation:
