@@ -80,7 +80,7 @@ public:
     {
         if (!curr)
             return NULL;
-
+14
         if (curr->left != NULL)
             return curr->left;
         if (curr->right != NULL)
