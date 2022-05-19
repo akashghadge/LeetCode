@@ -71,7 +71,7 @@ int longestIncreasingPath(vector<vector<int>>& matrix) {
     }
     return ans;
 }
-};
+}; 
 int main()
 {
 }
