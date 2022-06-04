@@ -64,5 +64,5 @@ public:
     }
 };
 int main()
-{
+{ 
 }
