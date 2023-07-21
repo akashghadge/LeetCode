@@ -31,6 +31,6 @@ for file_name in os.listdir(directory):
         # Create the desired date in June 2023
         new_date = datetime.datetime(2023, 7, 1, 11, int(file_day))
         new_date += datetime.timedelta(days=(int(file_day)-1))
-
+        if(int(file_day)>=16):
         # Change the date, add, commit, and move to the next file
-        change_date_commit(file_path, new_date)
+            change_date_commit(file_path, new_date)
